@@ -7,6 +7,15 @@ export default defineConfig({
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
+    {
+      name: 'figma-asset-resolver',
+      enforce: 'pre',
+      resolveId(source) {
+        if (source.startsWith('figma:asset/')) {
+          return path.resolve(__dirname, 'src/assets', source.replace('figma:asset/', ''))
+        }
+      },
+    },
     react(),
     tailwindcss(),
   ],
