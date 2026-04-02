@@ -1,4 +1,4 @@
-import imgChatGptImage3120261040545 from "figma:asset/dd59e33f66efe268daf372ec102031ee73738729.png";
+import imgChatGptImage3120261040545 from "../assets/dd59e33f66efe268daf372ec102031ee73738729.png";
 
 export default function Component() {
   return (
