@@ -69,7 +69,8 @@ export default function Component() {
         <p className="leading-[27px] mb-0">— Зато я почти попал!</p>
         <p className="leading-[27px] mb-0">{`Он попробовал ещё раз… `}</p>
         <p className="leading-[27px] mb-0">и ещё…</p>
-        <p className="leading-[27px]">Мяч попадал в кольцо, но чаще — нет.</p>
+        <p className="leading-[27px] mb-0">Мяч попадал в кольцо,</p>
+        <p className="leading-[27px]">но чаще — нет.</p>
       </div>
       <div className="absolute inset-[86.22%_48.24%_11.88%_27.39%]">
         <div className="absolute inset-[-62.5%_-6.9%]">
