@@ -10,8 +10,8 @@ export default function Component() {
         }
 
         @keyframes page3CharacterScale {
-          0%, 100% { transform: scale(1.1); }
-          50% { transform: scale(1); }
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.1); }
         }
       `}</style>
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
@@ -22,7 +22,7 @@ export default function Component() {
       <div
         className="absolute h-[334px] left-[253px] top-[461px] w-[337px]"
         data-name="Component 2"
-        style={{ animation: 'page3CirclesScale 2.6s ease-in-out infinite', transformOrigin: 'center center' }}>
+        style={{ animation: 'page3CirclesScale 7.8s ease-in-out infinite', transformOrigin: 'center center' }}>
         <div className="absolute inset-[17.66%_10.39%_10.48%_18.4%]">
           <div className="absolute inset-[-0.42%]">
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 242 242">
@@ -56,47 +56,51 @@ export default function Component() {
           </div>
         </div>
       </div>
-      <div style={{ animation: 'page3CharacterScale 2.6s ease-in-out infinite', transformOrigin: '72% 80%' }}>
-        <div className="absolute flex inset-[51.54%_4.71%_8.08%_44.87%] items-center justify-center">
-          <div className="-scale-y-100 flex-none h-[340px] rotate-180 w-[300px]">
-            <div className="relative size-full" data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 3">
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <img alt="" className="absolute h-[208.55%] left-[-25.4%] max-w-none top-0 w-[354.73%]" src={imgChatGptImage3120261040543} />
-              </div>
+      <div
+        className="absolute flex inset-[51.54%_4.71%_8.08%_44.87%] items-center justify-center"
+        style={{ animation: 'page3CharacterScale 7.8s ease-in-out infinite', transformOrigin: '50% 80%' }}>
+        <div className="-scale-y-100 flex-none h-[340px] rotate-180 w-[300px]">
+          <div className="relative size-full" data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 3">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <img alt="" className="absolute h-[208.55%] left-[-25.4%] max-w-none top-0 w-[354.73%]" src={imgChatGptImage3120261040543} />
             </div>
           </div>
         </div>
-        <div className="absolute inset-[87.05%_7.39%_12.11%_84.37%]">
-          <div className="absolute inset-[-142.86%_-20.41%]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 69 27">
-              <g filter="url(#filter0_f_1_158)" id="Ellipse 2" opacity="0.4">
-                <ellipse cx="34.5" cy="13.5" fill="var(--fill-0, #2C2C2C)" rx="24.5" ry="3.5" />
-              </g>
-              <defs>
-                <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="27" id="filter0_f_1_158" width="69" x="0" y="0">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                  <feGaussianBlur result="effect1_foregroundBlur_1_158" stdDeviation="5" />
-                </filter>
-              </defs>
-            </svg>
-          </div>
+      </div>
+      <div
+        className="absolute inset-[87.05%_7.39%_12.11%_84.37%]"
+        style={{ animation: 'page3CharacterScale 7.8s ease-in-out infinite', transformOrigin: 'center center' }}>
+        <div className="absolute inset-[-142.86%_-20.41%]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 69 27">
+            <g filter="url(#filter0_f_1_158)" id="Ellipse 2" opacity="0.4">
+              <ellipse cx="34.5" cy="13.5" fill="var(--fill-0, #2C2C2C)" rx="24.5" ry="3.5" />
+            </g>
+            <defs>
+              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="27" id="filter0_f_1_158" width="69" x="0" y="0">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
+                <feGaussianBlur result="effect1_foregroundBlur_1_158" stdDeviation="5" />
+              </filter>
+            </defs>
+          </svg>
         </div>
-        <div className="absolute inset-[85.99%_24.54%_12.11%_51.09%]">
-          <div className="absolute inset-[-62.5%_-6.9%]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 165 36">
-              <g filter="url(#filter0_f_1_160)" id="Ellipse 3" opacity="0.2">
-                <ellipse cx="82.5" cy="18" fill="var(--fill-0, #048288)" rx="72.5" ry="8" />
-              </g>
-              <defs>
-                <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="36" id="filter0_f_1_160" width="165" x="0" y="0">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                  <feGaussianBlur result="effect1_foregroundBlur_1_160" stdDeviation="5" />
-                </filter>
-              </defs>
-            </svg>
-          </div>
+      </div>
+      <div
+        className="absolute inset-[85.99%_24.54%_12.11%_51.09%]"
+        style={{ animation: 'page3CharacterScale 7.8s ease-in-out infinite', transformOrigin: 'center center' }}>
+        <div className="absolute inset-[-62.5%_-6.9%]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 165 36">
+            <g filter="url(#filter0_f_1_160)" id="Ellipse 3" opacity="0.2">
+              <ellipse cx="82.5" cy="18" fill="var(--fill-0, #048288)" rx="72.5" ry="8" />
+            </g>
+            <defs>
+              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="36" id="filter0_f_1_160" width="165" x="0" y="0">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
+                <feGaussianBlur result="effect1_foregroundBlur_1_160" stdDeviation="5" />
+              </filter>
+            </defs>
+          </svg>
         </div>
       </div>
       <div className="absolute font-['Unbounded',sans-serif] font-normal h-[227px] leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[109px] tracking-[0.26px] w-[475px]">
