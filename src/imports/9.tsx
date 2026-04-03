@@ -3,9 +3,9 @@ export default function Component() {
     <div className="relative size-full" data-name="9">
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
       <div className="absolute h-[842px] left-0 overflow-clip top-0 w-[595px]" data-name="A4 - 3" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
-        <p className="absolute font-['Unbounded:Medium',sans-serif] font-medium leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px] whitespace-nowrap">9</p>
+        <p className="absolute font-['Unbounded',sans-serif] font-medium leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px] whitespace-nowrap">9</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[1054px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[63px] tracking-[0.26px] w-[455px] whitespace-pre-wrap">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[1054px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[63px] tracking-[0.26px] w-[455px] whitespace-pre-wrap">
         <p className="leading-[27px] mb-0">{`К нему подошёл старый кот Барсик. Он был мудрый `}</p>
         <p className="leading-[27px] mb-0">и спокойный.</p>
         <p className="leading-[27px] mb-0">— Что случилось, Мурчик?</p>
@@ -34,7 +34,7 @@ export default function Component() {
         <p className="leading-[27px] mb-0">Мурчик расправил плечи, поднял хвост и радостно сказал:</p>
         <p className="leading-[27px]">— Тогда я — котик-спортсмен!</p>
       </div>
-      <div className="-translate-x-1/2 absolute font-['Unbounded:Bold',sans-serif] font-bold h-[130px] leading-[0] left-[297.5px] text-[#00b2b7] text-[15px] text-center top-[699px] tracking-[0.3px] w-[455px] whitespace-pre-wrap">
+      <div className="-translate-x-1/2 absolute font-['Unbounded',sans-serif] font-bold h-[130px] leading-[0] left-[297.5px] text-[#00b2b7] text-[15px] text-center top-[699px] tracking-[0.3px] w-[455px] whitespace-pre-wrap">
         <p className="leading-[27px] mb-0">{`🐾 И если ты тоже пробуешь новое — значит, `}</p>
         <p className="leading-[27px]">ты уже настоящий спортсмен!</p>
       </div>

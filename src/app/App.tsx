@@ -39,9 +39,12 @@ export default function App() {
           ← Назад
         </button>
 
-        <div style={{ fontFamily: 'Unbounded, sans-serif', color: '#2c2c2c', margin: '0 20px' }}>
+        <button
+          onClick={() => setPage(1)}
+          style={{ fontFamily: 'var(--font-display)', color: '#2c2c2c', margin: '0 20px', background: 'transparent', border: 'none', cursor: 'pointer', padding: 0 }}
+          aria-label="Перейти на первый слайд">
           {page} / {pages.length}
-        </div>
+        </button>
 
         <button
           onClick={() => setPage(page + 1)}

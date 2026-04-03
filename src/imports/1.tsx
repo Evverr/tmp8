@@ -80,12 +80,12 @@ function Component() {
           <Component2 />
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute font-['Unbounded:Medium',sans-serif] font-medium leading-[0] left-[calc(50%+0.5px)] text-[34px] text-center text-shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white top-[63px] whitespace-nowrap">
+      <div className="-translate-x-1/2 absolute font-['Unbounded',sans-serif] font-medium leading-[0] left-[calc(50%+0.5px)] text-[34px] text-center text-shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white top-[63px] whitespace-nowrap">
         <p className="leading-[50px] mb-0 whitespace-pre">Невероятные</p>
         <p className="leading-[50px] mb-0 whitespace-pre">{`спортивные `}</p>
         <p className="leading-[50px] whitespace-pre">приключения</p>
       </div>
-      <p className="-translate-x-1/2 absolute font-['Unbounded:Medium',sans-serif] font-medium leading-[50px] left-[calc(50%+0.5px)] text-[48px] text-center text-shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white top-[685px] whitespace-nowrap">Кота-Мурчика</p>
+      <p className="-translate-x-1/2 absolute font-['Unbounded',sans-serif] font-medium leading-[50px] left-[calc(50%+0.5px)] text-[48px] text-center text-shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white top-[685px] whitespace-nowrap">Кота-Мурчика</p>
     </div>
   );
 }

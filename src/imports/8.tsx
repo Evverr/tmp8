@@ -4,11 +4,11 @@ export default function Component() {
   return (
     <div className="relative size-full" data-name="8">
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
-      <div className="absolute font-['Unbounded:Medium',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 5" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
+      <div className="absolute font-['Unbounded',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 5" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
         <p className="absolute leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px]">8</p>
         <p className="absolute leading-[110px] left-[70px] text-[#38db81] text-[30px] top-[14px]">Теннис</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[361px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[120px] tracking-[0.26px] w-[397px] whitespace-pre-wrap">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[361px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[120px] tracking-[0.26px] w-[397px] whitespace-pre-wrap">
         <p className="leading-[27px] mb-0">Во дворе снова появились дети — на этот раз с ракетками.</p>
         <p className="leading-[27px] mb-0">— Теннис! — услышал Мурчик.</p>
         <p className="leading-[27px] mb-0">— Это про ловкость!</p>
@@ -95,7 +95,7 @@ export default function Component() {
           </svg>
         </div>
       </div>
-      <div className="-translate-x-full absolute font-['Unbounded:Regular',sans-serif] font-normal h-[835px] leading-[0] left-[534px] text-[#2c2c2c] text-[13px] text-right top-[540px] tracking-[0.26px] w-[454px] whitespace-pre-wrap">
+      <div className="-translate-x-full absolute font-['Unbounded',sans-serif] font-normal h-[835px] leading-[0] left-[534px] text-[#2c2c2c] text-[13px] text-right top-[540px] tracking-[0.26px] w-[454px] whitespace-pre-wrap">
         <p className="leading-[27px] mb-0">&nbsp;</p>
         <p className="leading-[27px] mb-0">— У меня получается! — радовался Мурчик.</p>
         <p className="leading-[27px] mb-0">Но потом он ударил слишком сильно…</p>

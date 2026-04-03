@@ -4,7 +4,7 @@ export default function Component() {
   return (
     <div className="relative size-full" data-name="5">
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
-      <div className="absolute font-['Unbounded:Medium',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 5" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
+      <div className="absolute font-['Unbounded',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 5" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
         <p className="absolute leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px]">5</p>
         <p className="absolute leading-[110px] left-[70px] text-[#d55e60] text-[30px] top-[14px]">Бокс</p>
       </div>
@@ -67,7 +67,7 @@ export default function Component() {
           </svg>
         </div>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[382px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[120px] tracking-[0.26px] w-[476px]">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[382px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[120px] tracking-[0.26px] w-[476px]">
         <p className="leading-[27px] mb-0">Вечером Мурчик вернулся домой и увидел по телевизору боксёров.</p>
         <p className="leading-[27px] mb-0">Они стояли друг напротив друга и быстро двигали лапами (ну, руками).</p>
         <p className="leading-[27px] mb-0">— Ух ты! — сказал Мурчик. — Вот это сила и смелость!</p>
@@ -76,7 +76,7 @@ export default function Component() {
         <p className="leading-[27px] mb-0">И начал «тренироваться» с подушкой:</p>
         <p className="leading-[27px]">— Тыдыщ! Тыдыщ! Бам!</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[199px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[350px] tracking-[0.26px] w-[252px] whitespace-pre-wrap">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[199px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[350px] tracking-[0.26px] w-[252px] whitespace-pre-wrap">
         <p className="leading-[27px] mb-0">&nbsp;</p>
         <p className="leading-[27px] mb-0">
           Но вдруг подушка наклонилась…
@@ -85,7 +85,7 @@ export default function Component() {
         </p>
         <p className="leading-[27px]">— Мммф… — послышалось из-под неё.</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[574px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[526px] tracking-[0.26px] w-[207px]">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[574px] leading-[0] left-[70px] text-[#2c2c2c] text-[13px] top-[526px] tracking-[0.26px] w-[207px]">
         <p className="leading-[27px] mb-0">&nbsp;</p>
         <p className="leading-[27px] mb-0">Через секунду показалась лапка, потом нос.</p>
         <p className="leading-[27px] mb-0">— Победила… подушка… — сказал Мурчик.</p>

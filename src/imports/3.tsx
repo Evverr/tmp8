@@ -4,7 +4,7 @@ export default function Component() {
   return (
     <div className="relative size-full" data-name="3">
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
-      <div className="absolute font-['Unbounded:Medium',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 4" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
+      <div className="absolute font-['Unbounded',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 4" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
         <p className="absolute leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px]">3</p>
         <p className="absolute leading-[110px] left-[70px] text-[#00a3a3] text-[30px] top-[14px]">Бейсбол</p>
       </div>
@@ -83,7 +83,7 @@ export default function Component() {
           </svg>
         </div>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[227px] leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[109px] tracking-[0.26px] w-[475px]">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[227px] leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[109px] tracking-[0.26px] w-[475px]">
         <p className="leading-[27px] mb-0">В этот день во дворе дети играли в бейсбол.</p>
         <p className="leading-[27px] mb-0">Один мальчик бросал мяч, а другой отбивал его длинной палкой.</p>
         <p className="leading-[27px] mb-0">— Вот это да! — восхитился Мурчик. — Я тоже так смогу!</p>
@@ -91,14 +91,14 @@ export default function Component() {
         <p className="leading-[27px] mb-0">Он замахнулся… и… БУМ!</p>
         <p className="leading-[27px]">&nbsp;</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[274px] tracking-[0.26px] w-[478px]">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[274px] tracking-[0.26px] w-[478px]">
         <p className="leading-[27px] mb-0">&nbsp;</p>
         <p className="leading-[27px] mb-0">Мячик улетел далеко-далеко — прямо в густые кусты.</p>
         <p className="leading-[27px] mb-0">— Ура! — закричал Мурчик и побежал за ним.</p>
         <p className="leading-[27px] mb-0">Но в кустах оказалось не так просто.</p>
         <p className="leading-[27px]">Ветки цеплялись за хвост, листья щекотали нос, а где-то внутри что-то шуршало.</p>
       </div>
-      <div className="absolute font-['Unbounded:Regular',sans-serif] font-normal h-[274px] leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[449px] tracking-[0.26px] w-[205px]">
+      <div className="absolute font-['Unbounded',sans-serif] font-normal h-[274px] leading-[0] left-[67px] text-[#2c2c2c] text-[13px] top-[449px] tracking-[0.26px] w-[205px]">
         <p className="leading-[27px] mb-0">&nbsp;</p>
         <p className="leading-[27px] mb-0">— Ой… — сказал Мурчик. — Кажется, я заблудился…</p>
         <p className="leading-[27px] mb-0">Он осторожно выбрался обратно, весь в листиках и с веточкой за ухом.</p>
