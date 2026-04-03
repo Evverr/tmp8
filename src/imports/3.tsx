@@ -6,12 +6,12 @@ export default function Component() {
       <style>{`
         @keyframes page3CirclesScale {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(0.9); }
+          50% { transform: scale(0.93); }
         }
 
         @keyframes page3CharacterScale {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.1); }
+          50% { transform: scale(1.07); }
         }
       `}</style>
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />

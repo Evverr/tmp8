@@ -3,12 +3,25 @@ import imgChatGptImage3120261040543 from "../assets/dd59e33f66efe268daf372ec1020
 export default function Component() {
   return (
     <div className="relative size-full" data-name="5">
+      <style>{`
+        @keyframes page5CirclesScale {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(0.93); }
+        }
+
+        @keyframes page5CharacterScale {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.07); }
+        }
+      `}</style>
       <div className="absolute bg-white h-[843px] left-0 top-0 w-[595px]" />
       <div className="absolute font-['Unbounded',sans-serif] font-medium h-[842px] left-0 overflow-clip top-0 w-[595px] whitespace-nowrap" data-name="A4 - 5" style={{ backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(rgb(47, 218, 227) 0%, rgb(80, 251, 223) 84.135%)" }}>
         <p className="absolute leading-[50px] left-[calc(50%-2.5px)] opacity-30 text-[#2c2c2c] text-[12px] top-[779px]">5</p>
         <p className="absolute leading-[110px] left-[70px] text-[#d55e60] text-[30px] top-[14px]">Бокс</p>
       </div>
-      <div className="absolute flex h-[334px] items-center justify-center left-[231px] top-[440px] w-[337px]">
+      <div
+        className="absolute flex h-[334px] items-center justify-center left-[231px] top-[440px] w-[337px]"
+        style={{ animation: 'page5CirclesScale 7.8s ease-in-out infinite', transformOrigin: 'center center' }}>
         <div className="-scale-y-100 flex-none rotate-180">
           <div className="h-[334px] relative w-[337px]" data-name="Component 3">
             <div className="absolute inset-[17.66%_10.39%_10.48%_18.4%]">
@@ -46,12 +59,17 @@ export default function Component() {
           </div>
         </div>
       </div>
-      <div className="absolute inset-[50.12%_-0.84%_14.37%_49.24%]" data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 3">
+      <div
+        className="absolute inset-[50.12%_-0.84%_14.37%_49.24%]"
+        data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 3"
+        style={{ animation: 'page5CharacterScale 7.8s ease-in-out infinite', transformOrigin: '50% 80%' }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img alt="" className="absolute h-[213.78%] left-[-213.47%] max-w-none top-0 w-[313.47%]" src={imgChatGptImage3120261040543} />
         </div>
       </div>
-      <div className="absolute inset-[82.19%_16.81%_15.91%_58.82%]">
+      <div
+        className="absolute inset-[82.19%_16.81%_15.91%_58.82%]"
+        style={{ animation: 'page5CharacterScale 7.8s ease-in-out infinite', transformOrigin: 'center center' }}>
         <div className="absolute inset-[-62.5%_-6.9%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 165 36">
             <g filter="url(#filter0_f_1_172)" id="Ellipse 3" opacity="0.2">

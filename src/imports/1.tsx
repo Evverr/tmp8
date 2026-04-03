@@ -75,7 +75,15 @@ function Component2({ className }: { className?: string }) {
 function Component() {
   return (
     <div className="absolute bg-gradient-to-b from-[#4eb9bf] h-[842px] left-0 overflow-clip to-[#2dfbdf] to-[84.135%] top-0 w-[595px]" data-name>
-      <div className="absolute flex h-[424px] items-center justify-center left-[100px] top-[265px] w-[419px]">
+      <style>{`
+        @keyframes page1CharacterScale {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.07); }
+        }
+      `}</style>
+      <div
+        className="absolute flex h-[424px] items-center justify-center left-[100px] top-[265px] w-[419px]"
+        style={{ animation: 'page1CharacterScale 7.8s ease-in-out infinite', transformOrigin: '50% 80%' }}>
         <div className="-scale-y-100 flex-none rotate-180">
           <Component2 />
         </div>
