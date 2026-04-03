@@ -11,7 +11,17 @@ import Page8 from '../imports/8';
 import Page9 from '../imports/9';
 
 export default function App() {
+  const BASE_PAGE_WIDTH = 595;
+  const BASE_PAGE_HEIGHT = 843;
+  const TOP_BAR_SPACE = 84;
+  const HORIZONTAL_PADDING = 24;
+  const BOTTOM_SPACE = 20;
+
   const [page, setPage] = useState(1);
+  const [viewport, setViewport] = useState(() => ({
+    width: typeof window !== 'undefined' ? window.innerWidth : BASE_PAGE_WIDTH,
+    height: typeof window !== 'undefined' ? window.innerHeight : BASE_PAGE_HEIGHT,
+  }));
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const skipClickRef = useRef(false);
 
@@ -66,6 +76,19 @@ export default function App() {
   };
 
   useEffect(() => {
+    const updateViewport = () => {
+      setViewport({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    updateViewport();
+    window.addEventListener('resize', updateViewport);
+    return () => window.removeEventListener('resize', updateViewport);
+  }, []);
+
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
         goPrev();
@@ -78,6 +101,12 @@ export default function App() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [pages.length]);
+
+  const availableWidth = Math.max(viewport.width - HORIZONTAL_PADDING, 1);
+  const availableHeight = Math.max(viewport.height - TOP_BAR_SPACE - BOTTOM_SPACE, 1);
+  const pageScale = Math.min(availableWidth / BASE_PAGE_WIDTH, availableHeight / BASE_PAGE_HEIGHT);
+  const scaledPageWidth = BASE_PAGE_WIDTH * pageScale;
+  const scaledPageHeight = BASE_PAGE_HEIGHT * pageScale;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh', background: '#f5f5f5', padding: '0' }}>
@@ -117,9 +146,8 @@ export default function App() {
         style={{
           marginTop: '84px',
           marginBottom: '20px',
-          width: 'min(calc(100vw - 24px), calc((100dvh - 120px) * 595 / 843))',
-          height: 'auto',
-          aspectRatio: '595/843',
+          width: `${scaledPageWidth}px`,
+          height: `${scaledPageHeight}px`,
           position: 'relative',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
           overflow: 'hidden',
@@ -128,7 +156,13 @@ export default function App() {
         }}>
         <div
           key={page}
-          style={{ width: '100%', height: '100%', transform: 'scale(1)', transformOrigin: 'top left', animation: 'pageFadeIn 280ms ease' }}>
+          style={{
+            width: `${BASE_PAGE_WIDTH}px`,
+            height: `${BASE_PAGE_HEIGHT}px`,
+            transform: `scale(${pageScale})`,
+            transformOrigin: 'top left',
+            animation: 'pageFadeIn 280ms ease',
+          }}>
           <CurrentPage />
         </div>
       </div>
