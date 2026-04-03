@@ -19,6 +19,12 @@ function Frame() {
 function Component2({ className }: { className?: string }) {
   return (
     <div className={className || "h-[424px] relative w-[419px]"} data-name="Component 1">
+      <style>{`
+        @keyframes page1CharacterScale {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.07); }
+        }
+      `}</style>
       <Frame />
       <div className="absolute inset-[83.25%_9.07%_13.21%_26.73%]">
         <div className="absolute inset-[-133.33%_-7.43%]">
@@ -56,7 +62,10 @@ function Component2({ className }: { className?: string }) {
           </div>
         </div>
       </div>
-      <div className="absolute aspect-[524/531] left-0 right-0 top-0" data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 2">
+      <div
+        className="absolute aspect-[524/531] left-0 right-0 top-0"
+        data-name="ChatGPT Image 31 мар. 2026 г., 10_40_54 2"
+        style={{ animation: 'page1CharacterScale 7.8s ease-in-out infinite', transformOrigin: '50% 80%' }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img alt="" className="absolute h-[192.84%] left-[-193.13%] max-w-none top-[-92.84%] w-[293.13%]" src={imgChatGptImage3120261040542} />
         </div>
@@ -75,15 +84,7 @@ function Component2({ className }: { className?: string }) {
 function Component() {
   return (
     <div className="absolute bg-gradient-to-b from-[#4eb9bf] h-[842px] left-0 overflow-clip to-[#2dfbdf] to-[84.135%] top-0 w-[595px]" data-name>
-      <style>{`
-        @keyframes page1CharacterScale {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.07); }
-        }
-      `}</style>
-      <div
-        className="absolute flex h-[424px] items-center justify-center left-[100px] top-[265px] w-[419px]"
-        style={{ animation: 'page1CharacterScale 7.8s ease-in-out infinite', transformOrigin: '50% 80%' }}>
+      <div className="absolute flex h-[424px] items-center justify-center left-[100px] top-[265px] w-[419px]">
         <div className="-scale-y-100 flex-none rotate-180">
           <Component2 />
         </div>
