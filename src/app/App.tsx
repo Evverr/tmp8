@@ -18,12 +18,15 @@ export default function App() {
   const BOTTOM_SPACE = 20;
 
   const [page, setPage] = useState(1);
+  const [swipeOffsetX, setSwipeOffsetX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
   const [viewport, setViewport] = useState(() => ({
     width: typeof window !== 'undefined' ? window.innerWidth : BASE_PAGE_WIDTH,
     height: typeof window !== 'undefined' ? window.innerHeight : BASE_PAGE_HEIGHT,
   }));
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const skipClickRef = useRef(false);
+  const swipeCommitTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const pages = [Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9];
   const CurrentPage = pages[page - 1];
@@ -49,8 +52,32 @@ export default function App() {
   };
 
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    if (swipeCommitTimerRef.current) {
+      clearTimeout(swipeCommitTimerRef.current);
+      swipeCommitTimerRef.current = null;
+    }
+
     const touch = e.touches[0];
     touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+    setSwipeOffsetX(0);
+    setIsSwiping(true);
+  };
+
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+    if (!touchStartRef.current) {
+      return;
+    }
+
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+    const horizontalIntent = Math.abs(deltaX) > Math.abs(deltaY);
+
+    if (!horizontalIntent) {
+      return;
+    }
+
+    setSwipeOffsetX(deltaX);
   };
 
   const handleTouchEnd = (e: TouchEvent<HTMLDivElement>) => {
@@ -65,11 +92,31 @@ export default function App() {
 
     if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY)) {
       skipClickRef.current = true;
-      if (deltaX > 0) {
-        goPrev();
+      const swipeToPrev = deltaX > 0;
+      const canGoPrev = swipeToPrev && page > 1;
+      const canGoNext = !swipeToPrev && page < pages.length;
+
+      if (canGoPrev || canGoNext) {
+        const exitOffset = swipeToPrev ? scaledPageWidth : -scaledPageWidth;
+        setIsSwiping(false);
+        setSwipeOffsetX(exitOffset);
+        swipeCommitTimerRef.current = setTimeout(() => {
+          if (swipeToPrev) {
+            goPrev();
+          } else {
+            goNext();
+          }
+          setIsSwiping(false);
+          setSwipeOffsetX(0);
+          swipeCommitTimerRef.current = null;
+        }, 170);
       } else {
-        goNext();
+        setSwipeOffsetX(0);
+        setIsSwiping(false);
       }
+    } else {
+      setSwipeOffsetX(0);
+      setIsSwiping(false);
     }
 
     touchStartRef.current = null;
@@ -101,6 +148,14 @@ export default function App() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [pages.length]);
+
+  useEffect(() => {
+    return () => {
+      if (swipeCommitTimerRef.current) {
+        clearTimeout(swipeCommitTimerRef.current);
+      }
+    };
+  }, []);
 
   const availableWidth = Math.max(viewport.width - HORIZONTAL_PADDING, 1);
   const availableHeight = Math.max(viewport.height - TOP_BAR_SPACE - BOTTOM_SPACE, 1);
@@ -142,6 +197,7 @@ export default function App() {
       <div
         onClick={handlePageClick}
         onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         style={{
           marginTop: '84px',
@@ -157,13 +213,21 @@ export default function App() {
         <div
           key={page}
           style={{
-            width: `${BASE_PAGE_WIDTH}px`,
-            height: `${BASE_PAGE_HEIGHT}px`,
-            transform: `scale(${pageScale})`,
-            transformOrigin: 'top left',
-            animation: 'pageFadeIn 280ms ease',
+            width: '100%',
+            height: '100%',
+            transform: `translateX(${swipeOffsetX}px)`,
+            transition: isSwiping ? 'none' : 'transform 220ms ease-out',
           }}>
-          <CurrentPage />
+          <div
+            style={{
+              width: `${BASE_PAGE_WIDTH}px`,
+              height: `${BASE_PAGE_HEIGHT}px`,
+              transform: `scale(${pageScale})`,
+              transformOrigin: 'top left',
+              animation: 'pageFadeIn 280ms ease',
+            }}>
+            <CurrentPage />
+          </div>
         </div>
       </div>
     </div>
